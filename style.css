@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@100;200;300;400;500;600;700;800&display=swap');
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Glory', sans-serif;
+}
+
+.navigationBar {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: auto;
+   z-index: -2;
+   background: #000;
+}
+
+.navigationBar div {
+   margin: 15px 50px;
+}
+
+.navigationBar .logoName {
+   font-size: 20px;
+   font-weight: 700;
+   color: #fff;
+}
+
+.navigationBar .sectionName {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.sectionName .btn {
+   margin-right: .5em;
+   font-size: 18px;
+   text-decoration: none;
+   color: #fff;
+   cursor: pointer;
+   overflow: hidden;
+   position: relative;
+   padding: 8px 28px;
+   z-index: 3;
+}
+
+.sectionName .btn::before {
+   content: "";
+   position: absolute;
+   height: 0%;
+   width: 100%;
+   left: 0;
+   z-index: -1;
+   background: #3498db;
+   bottom: 0;
+   border-radius: 50% 50% 0 0 ;
+   transition: .6s;
+}
+
+.btn:hover::before {
+   height: 180%;
+}
