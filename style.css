@@ -6,6 +6,7 @@
    font-family: 'Glory', sans-serif;
 }
 
+/* Navigation bar */
 .navigationBar {
    display: flex;
    align-items: center;
@@ -20,8 +21,8 @@
 }
 
 .navigationBar .logoName {
-   font-size: 20px;
-   font-weight: 700;
+   font-size: 25px;
+   font-weight: 800;
    color: #fff;
 }
 
@@ -40,6 +41,7 @@
    overflow: hidden;
    position: relative;
    padding: 8px 28px;
+   border-radius: 5px;
    z-index: 3;
 }
 
@@ -58,4 +60,30 @@
 
 .btn:hover::before {
    height: 180%;
+}
+
+/* Homepage  */
+#home {
+   display: flex;
+   background: url('https://www.wallpaperup.com/uploads/wallpapers/2018/07/07/1272412/7be4698ba173f10dda790d1c8a3f8d2b.jpg');
+   position: absolute;
+   height: 89vh;
+   width: 100%;
+   background-size: cover;
+   overflow-y: hidden;
+}
+
+#home .Contents {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   margin-bottom: 120px;
+   color: #b4b4b4;
+   font-size: 2em;
+   width: 100vw;
+}
+
+#home .Contents .body h1>span {
+   color: #3498db;
 }
