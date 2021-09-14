@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Glory:wght@100;200;300;400;500;600;700;800&display=swap');
+
 * {
    margin: 0;
    padding: 0;
@@ -6,14 +7,16 @@
    font-family: 'Glory', sans-serif;
 }
 
+
+
 /* Navigation bar */
 .navigationBar {
    display: flex;
    align-items: center;
    justify-content: space-between;
    height: auto;
-   z-index: -2;
-   background: #000;
+   width: 100%;
+   position: absolute;
 }
 
 .navigationBar div {
@@ -21,18 +24,18 @@
 }
 
 .navigationBar .logoName {
-   font-size: 25px;
+   font-size: 35px;
    font-weight: 800;
    color: #fff;
 }
 
-.navigationBar .sectionName {
+.navigationBar .sectionNames {
    display: flex;
    justify-content: center;
    align-items: center;
 }
 
-.sectionName .btn {
+.sectionNames .btn {
    margin-right: .5em;
    font-size: 18px;
    text-decoration: none;
@@ -45,14 +48,14 @@
    z-index: 3;
 }
 
-.sectionName .btn::before {
+.sectionNames .btn::before {
    content: "";
    position: absolute;
    height: 0%;
    width: 100%;
    left: 0;
    z-index: -1;
-   background: #3498db;
+   background: #257bb4;
    bottom: 0;
    border-radius: 50% 50% 0 0 ;
    transition: .6s;
@@ -62,15 +65,14 @@
    height: 180%;
 }
 
+
 /* Homepage  */
 #home {
    display: flex;
-   background: url('https://www.wallpaperup.com/uploads/wallpapers/2018/07/07/1272412/7be4698ba173f10dda790d1c8a3f8d2b.jpg');
    position: absolute;
-   height: 89vh;
+   background-color: #001225;
+   height: 100vh;
    width: 100%;
-   background-size: cover;
-   overflow-y: hidden;
 }
 
 #home .Contents {
@@ -78,12 +80,252 @@
    align-items: center;
    flex-direction: column;
    justify-content: center;
-   margin-bottom: 120px;
-   color: #b4b4b4;
-   font-size: 2em;
+   margin-bottom: 50px;
+   color: #d8d8d8;
    width: 100vw;
 }
 
 #home .Contents .body h1>span {
-   color: #3498db;
+   color: #0089e4;
 }
+
+/* Animation for home contents */
+#body .h1 {
+   -webkit-animation: fadein .5s;
+   -moz-animation: fadein .5s;
+   -ms-animation: fadein .5s;
+   -o-animation: fadein .5s;
+   animation: fadein .5s;
+   font-size: 3em;
+}
+
+#body .secondh1 {
+   -webkit-animation: fadein 1s;
+   -moz-animation: fadein 1s;
+   -ms-animation: fadein 1s;
+   -o-animation: fadein 1s;
+   animation: fadein 1s;
+   font-size: 4em;
+}
+
+#body .thirdh1 {
+   -webkit-animation: fadein 1.5s;
+   -moz-animation: fadein 1.5s;
+   -ms-animation: fadein 1.5s;
+   -o-animation: fadein 1.5s;
+   animation: fadein 1.5s;
+   font-size: 3.5em;
+}
+
+@keyframes fadein {
+   from {
+      transform: translateX(-500px);
+      opacity: 0;
+   }
+   to {
+      transform: translateX(0);
+      opacity: 1;
+   }
+}
+@-webkit-keyframes fadein {
+   from {
+      -moz-transform: translateX(-500px);
+      opacity: 0; 
+   }
+   to {
+      transform: translateX(0);
+      opacity: 1; 
+   }
+}
+@-moz-keyframes fadein {
+   from {
+      -webkit-transform: translateX(-500px);
+      opacity: 0; 
+   }
+   to {
+      transform: translateX(0);
+      opacity: 1; 
+   }
+}
+@-o-keyframes fadein {
+   from {
+      -o-transform: translateX(-500px);
+      opacity: 0; 
+   }
+   to {
+      transform: translateX(0);
+      opacity: 1; 
+   }
+}
+
+@-ms-keyframes fadein {
+   from {
+      -ms-transform: translateX(-500px);
+      opacity: 0; 
+   }
+   to {
+      transform: translateX(0);
+      opacity: 1; 
+   }
+}
+
+
+/* Animation for background of home */
+
+.bgLight {
+   position: absolute;
+   width: 0px;
+   opacity: .75;
+   background-color: #fff;
+   box-shadow: #e9f1f1 0px 0px 20px 2px;
+   opacity: 0;
+   top: 100vh;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+   margin: auto;
+} 
+
+.x1{
+  -webkit-animation: floatUp 4s infinite linear;
+  -moz-animation: floatUp 4s infinite linear;
+  -o-animation: floatUp 4s infinite linear;
+  animation: floatUp 4s infinite linear;
+   -webkit-transform: scale(1.0);
+   -moz-transform: scale(1.0);
+   -o-transform: scale(1.0);
+  transform: scale(1.0);
+}
+
+.x2{
+  -webkit-animation: floatUp 7s infinite linear;
+  -moz-animation: floatUp 7s infinite linear;
+  -o-animation: floatUp 7s infinite linear;
+  animation: floatUp 7s infinite linear;
+  -webkit-transform: scale(1.6);
+  -moz-transform: scale(1.6);
+  -o-transform: scale(1.6);
+  transform: scale(1.6);
+  left: 15%;
+}
+
+.x3{
+  -webkit-animation: floatUp 2.5s infinite linear;
+  -moz-animation: floatUp 2.5s infinite linear;
+  -o-animation: floatUp 2.5s infinite linear;
+  animation: floatUp 2.5s infinite linear;
+  -webkit-transform: scale(.5);
+  -moz-transform: scale(.5);
+  -o-transform: scale(.5);
+  transform: scale(.5);
+  left: -15%;
+}
+
+.x4{
+  -webkit-animation: floatUp 4.5s infinite linear;
+  -moz-animation: floatUp 4.5s infinite linear;
+  -o-animation: floatUp 4.5s infinite linear;
+  animation: floatUp 4.5s infinite linear;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  left: -34%;
+}
+
+.x5{
+  -webkit-animation: floatUp 8s infinite linear;
+  -moz-animation: floatUp 8s infinite linear;
+  -o-animation: floatUp 8s infinite linear;
+  animation: floatUp 8s infinite linear;
+  -webkit-transform: scale(2.2);
+  -moz-transform: scale(2.2);
+  -o-transform: scale(2.2);
+  transform: scale(2.2);
+  left: -57%;
+}
+
+.x6{
+  -webkit-animation: floatUp 3s infinite linear;
+  -moz-animation: floatUp 3s infinite linear;
+  -o-animation: floatUp 3s infinite linear;
+  animation: floatUp 3s infinite linear;
+  -webkit-transform: scale(.8);
+  -moz-transform: scale(.8);
+  -o-transform: scale(.8);
+  transform: scale(.8);
+  left: -81%;
+}
+
+.x7{
+  -webkit-animation: floatUp 5.3s infinite linear;
+  -moz-animation: floatUp 5.3s infinite linear;
+  -o-animation: floatUp 5.3s infinite linear;
+  animation: floatUp 5.3s infinite linear;
+  -webkit-transform: scale(3.2);
+  -moz-transform: scale(3.2);
+  -o-transform: scale(3.2);
+  transform: scale(3.2);
+  left: 37%;
+}
+
+.x8{
+  -webkit-animation: floatUp 4.7s infinite linear;
+  -moz-animation: floatUp 4.7s infinite linear;
+  -o-animation: floatUp 4.7s infinite linear;
+  animation: floatUp 4.7s infinite linear;
+  -webkit-transform: scale(1.7);
+  -moz-transform: scale(1.7);
+  -o-transform: scale(1.7);
+  transform: scale(1.7);
+  left: 62%;
+}
+
+.x9{
+  -webkit-animation: floatUp 4.1s infinite linear;
+  -moz-animation: floatUp 4.1s infinite linear;
+  -o-animation: floatUp 4.1s infinite linear;
+  animation: floatUp 4.1s infinite linear;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  left: 85%;
+}
+
+@-webkit-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@-moz-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@-o-keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+@keyframes floatUp{
+  0%{top: 100vh; opacity: 0;}
+  25%{opacity: 1;}
+  50%{top: 0vh; opacity: .8;}
+  75%{opacity: 1;}
+  100%{top: -100vh; opacity: 0;}
+}
+
+
+#about {
+   height: 100vh;
+   width: 100%;
+   display: flex;
+}
+
