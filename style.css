@@ -7,8 +7,6 @@
    font-family: 'Glory', sans-serif;
 }
 
-
-
 /* Navigation bar */
 .navigationBar {
    display: flex;
@@ -24,9 +22,13 @@
 }
 
 .navigationBar .logoName {
+   padding: 5px;
    font-size: 35px;
    font-weight: 800;
    color: #fff;
+   user-select: none;
+   border: 1px solid #fff;
+   border-radius: 8px;
 }
 
 .navigationBar .sectionNames {
@@ -65,9 +67,8 @@
    height: 180%;
 }
 
-
 /* Homepage  */
-#home {
+#home, #about {
    display: flex;
    position: absolute;
    background-color: #001225;
@@ -95,8 +96,8 @@
    -moz-animation: fadein .5s;
    -ms-animation: fadein .5s;
    -o-animation: fadein .5s;
-   animation: fadein .5s;
-   font-size: 3em;
+   animation: fadein 1s;
+   font-size: 3.5em;
 }
 
 #body .secondh1 {
@@ -104,7 +105,7 @@
    -moz-animation: fadein 1s;
    -ms-animation: fadein 1s;
    -o-animation: fadein 1s;
-   animation: fadein 1s;
+   animation: fadein 1.8s;
    font-size: 4em;
 }
 
@@ -113,58 +114,58 @@
    -moz-animation: fadein 1.5s;
    -ms-animation: fadein 1.5s;
    -o-animation: fadein 1.5s;
-   animation: fadein 1.5s;
+   animation: fadein 2.5s;
    font-size: 3.5em;
 }
 
 @keyframes fadein {
    from {
-      transform: translateX(-500px);
+      transform: rotateX(120deg) translateX(-500px);
       opacity: 0;
    }
    to {
-      transform: translateX(0);
+      transform: rotateX(0deg) translateX(0);
       opacity: 1;
    }
 }
 @-webkit-keyframes fadein {
    from {
-      -moz-transform: translateX(-500px);
+      -moz-transform: rotateX(120deg) translateX(-500px);
       opacity: 0; 
    }
    to {
-      transform: translateX(0);
+      transform: rotateX(0deg) translateX(0);
       opacity: 1; 
    }
 }
 @-moz-keyframes fadein {
    from {
-      -webkit-transform: translateX(-500px);
+      -webkit-transform: rotateX(120deg) translateX(-500px);
       opacity: 0; 
    }
    to {
-      transform: translateX(0);
+      transform: rotateX(0deg) translateX(0);
       opacity: 1; 
    }
 }
 @-o-keyframes fadein {
    from {
-      -o-transform: translateX(-500px);
+      -o-transform: rotateX(120deg) translateX(-500px);
       opacity: 0; 
    }
    to {
-      transform: translateX(0);
+      transform: rotateX(0deg) translateX(0);
       opacity: 1; 
    }
 }
 
 @-ms-keyframes fadein {
    from {
-      -ms-transform: translateX(-500px);
+      -ms-transform: rotateX(120deg) translateX(-500px);
       opacity: 0; 
    }
    to {
-      transform: translateX(0);
+      transform: rotateX(0deg) translateX(0);
       opacity: 1; 
    }
 }
@@ -322,10 +323,73 @@
   100%{top: -100vh; opacity: 0;}
 }
 
-
-#about {
-   height: 100vh;
-   width: 100%;
+/* About page */
+#about .Contents{
    display: flex;
+   align-items: center;
+   color: #d8d8d8;
 }
 
+#about .Contents .aboutBody {
+   padding: 0 200px 0 40px;
+}
+
+.aboutBody h1 {
+   font-size: 5em;
+   margin-bottom: 30px;
+   animation: fadein 1s;
+}
+
+.aboutBody .left p {
+   font-weight: 200;
+   line-height: 1.7em;
+   font-size: 1.9em;
+}
+.aboutBody .left .line1 {
+   -webkit-animation: fadein .6s;
+   -moz-animation: fadein .6s;
+   -ms-animation: fadein .6s;
+   -o-animation: fadein .6s;
+   animation: fadein .6s;
+}
+
+.aboutBody .left .line2 {
+   -webkit-animation: fadein .9s;
+   -moz-animation: fadein .9s;
+   -ms-animation: fadein .9s;
+   -o-animation: fadein .9s;
+   animation: fadein .9s;
+}
+.aboutBody .left .line3 {
+   -webkit-animation: fadein 1.3s;
+   -moz-animation: fadein 1.3s;
+   -ms-animation: fadein 1.3s;
+   -o-animation: fadein 1.3s;
+   animation: fadein 1.3s;
+}
+.aboutBody .left .line4 {
+   -webkit-animation: fadein 1.7s;
+   -moz-animation: fadein 1.7s;
+   -ms-animation: fadein 1.7s;
+   -o-animation: fadein 1.7s;
+   animation: fadein 1.7s;
+}
+.aboutBody .left .line5 {
+   -webkit-animation: fadein 2.1s;
+   -moz-animation: fadein 2.1s;
+   -ms-animation: fadein 2.1s;
+   -o-animation: fadein 2.1s;
+   animation: fadein 2.1s;
+}
+.aboutBody .left p span {
+   background: -webkit-linear-gradient(#e25300, #ffffff, rgb(20, 168, 0));
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-weight: 500;
+}
+
+.aboutBody .left p>a {
+   color: #39b6ff;
+   cursor: pointer;
+   text-decoration: none;
+}
