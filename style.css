@@ -68,7 +68,10 @@
 }
 
 /* Homepage  */
-#home, #about {
+#home, 
+#about,
+#projects,
+#contact {
    display: flex;
    position: absolute;
    background-color: #001225;
@@ -393,4 +396,78 @@
    color: #39b6ff;
    cursor: pointer;
    text-decoration: none;
+}
+
+/* Contact page */
+
+#contact .Contents{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   color: #d8d8d8;
+}
+
+/* .Contents .contactBody {
+   padding: ;
+} */
+
+.Contents .form div {
+   margin: 10px;
+}
+
+.form .box {
+   margin: 5px;
+   height: 2em;
+   width: 20vw;
+   padding: 10px;
+   border-radius: 8px;
+   border: none;
+   font-size: 1.3em;
+   color: #000;
+}
+
+.form .box2 {
+   margin: 5px;
+   height: 2em;
+   width: 41vw;
+   padding: 10px;
+   border-radius: 8px;
+   border: none;
+   font-size: 1.3em;
+   color: #000;
+}
+.form .msgInput {
+   height: 4em;
+}
+
+.form .btn button::before {
+   content: "";
+   position: absolute;
+   height: 0%;
+   width: 100%;
+   left: 0;
+   z-index: -1;
+   background: #257bb4;
+   bottom: 0;
+   border-radius: 50% 50% 0 0 ;
+   transition: .6s;
+}
+
+.form .btn button:hover::before {
+   height: 180%;
+}
+
+.form .btn .submitBtn {
+   margin: 5px;
+   padding: 8px 28px;
+   font-size: 1.3em;
+   border-radius: 5px;
+   background-color: #39b6ff;
+   overflow: hidden;
+   border: none;
+   cursor: pointer;
+   position: relative;
+   z-index: 3;
+   color: #fff;
 }
