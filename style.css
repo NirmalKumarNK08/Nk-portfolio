@@ -67,6 +67,10 @@
    height: 180%;
 }
 
+.btn.active {
+   color: #35abfa;
+}
+
 /* Homepage  */
 #home, 
 #about,
@@ -174,7 +178,7 @@
 }
 
 
-/* Animation for background of home */
+/* Animation for background */
 
 .bgLight {
    position: absolute;
@@ -338,15 +342,15 @@
 }
 
 .aboutBody h1 {
-   font-size: 5em;
-   margin-bottom: 30px;
+   font-size: 4em;
+   margin-bottom: 20px;
    animation: fadein 1s;
 }
 
 .aboutBody .left p {
    font-weight: 200;
-   line-height: 1.7em;
-   font-size: 1.9em;
+   line-height: 1.4em;
+   font-size: 1.7em;
 }
 .aboutBody .left .line1 {
    -webkit-animation: fadein .6s;
@@ -383,6 +387,13 @@
    -ms-animation: fadein 2.1s;
    -o-animation: fadein 2.1s;
    animation: fadein 2.1s;
+}
+.aboutBody .left .line6 {
+   -webkit-animation: fadein 2.5s;
+   -moz-animation: fadein 2.5s;
+   -ms-animation: fadein 2.5s;
+   -o-animation: fadein 2.5s;
+   animation: fadein 2.5s;
 }
 .aboutBody .left p span {
    background: -webkit-linear-gradient(#e25300, #ffffff, rgb(20, 168, 0));
