@@ -1,3 +1,2 @@
 # Nk-portfolio
-This will be my actual portfolio.
-But it's in work in progress...
+My Portfolio
